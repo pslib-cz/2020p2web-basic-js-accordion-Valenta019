@@ -227,4 +227,34 @@
     </div>
 </body>
 
+<script>
+    let vypujcky = document.getElementsByClassName("vypujcka-item")
+
+    for (let vypujcka of vypujcky)
+    {
+
+        let checkbox = vypujcka.getElementsByTagName("input")[0]
+        console.log(checkbox)
+        checkbox.onclick = (e) => {
+            //console.log(vypujcka)
+
+            let details = vypujcka.getElementsByClassName("detail-vypujcky-container")[0]
+            
+            
+
+            if (details.style.height != "0px"){
+                details.style.height = 0 + "px" 
+                details.style.display = "none"
+            }
+            else
+            {
+                console.log(details.offsetHeight)
+                details.style.height = "auto"
+                details.style.display = "block"
+            }
+
+        }
+    }
+</script>
+
 </html>
