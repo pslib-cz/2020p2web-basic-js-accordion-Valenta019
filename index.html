@@ -228,29 +228,24 @@
 </body>
 
 <script>
-    let vypujcky = document.getElementsByClassName("vypujcka-item")
+    let vypujcky = document.getElementsByClassName("vypujcka-item") //Získání všech výpujček
 
     for (let vypujcka of vypujcky)
     {
 
-        let checkbox = vypujcka.getElementsByTagName("input")[0]
-        console.log(checkbox)
+        let checkbox = vypujcka.getElementsByTagName("input")[0] //K checkboxu každé výpujčky přidej funkci
         checkbox.onclick = (e) => {
-            //console.log(vypujcka)
 
-            let details = vypujcka.getElementsByClassName("detail-vypujcky-container")[0]
+            let details = vypujcka.getElementsByClassName("detail-vypujcky-container")[0] // Na kliknutí sežeň z vlastní výpujčky detaily
             
-            
-
-            if (details.style.height != "0px"){
+            if (details.scrollHeight != "0"){ // A zavři je ||
                 details.style.height = 0 + "px" 
-                details.style.display = "none"
+                details.classList.remove("detail-vypujcky-container-checked")
             }
             else
             {
-                console.log(details.offsetHeight)
-                details.style.height = "auto"
-                details.style.display = "block"
+                details.style.height = "auto" // A otevři je | transition: ; vůbec nic nedělá, ani s danou hodnotou.
+                details.classList.add("detail-vypujcky-container-checked")
             }
 
         }
