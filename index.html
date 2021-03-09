@@ -233,26 +233,27 @@
     for (let vypujcka of vypujcky)
     {
 
-        let checkbox = vypujcka.getElementsByTagName("input")[0] //K checkboxu každé výpujčky přidej funkci
-        checkbox.onclick = (e) => {
+        let inputs = vypujcka.getElementsByTagName("input")
+        let checkbox
+        for (let input of inputs) {                    
+            if (input.type="checkbox") {
+            checkbox = input
+            }
+        }
+        checkbox.onclick = (e) => { //K checkboxu každé výpujčky přidej funkci
 
             let details = vypujcka.getElementsByClassName("detail-vypujcky-container")[0] // Na kliknutí sežeň z vlastní výpujčky detaily
             
 
-            if (details.scrollHeight != "0"){ // A zavři je ||
-
+            if (details.classList.contains("detail-vypujcky-container-checked")){ // A zavři je ||
 
                 details.style.height = 0 + "px" 
                 details.classList.remove("detail-vypujcky-container-checked")
             }
             else
-            {
-
+            {   
                 details.style.height = "auto" // A otevři je | transition: ; vůbec nic nedělá, ani s danou hodnotou.
                 details.classList.add("detail-vypujcky-container-checked")
-
-
-
             }
 
         }

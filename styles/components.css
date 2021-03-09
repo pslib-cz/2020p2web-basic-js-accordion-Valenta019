@@ -747,7 +747,7 @@ details>summary::-webkit-details-marker {
 .detail-vypujcky-container { 
   display: none;
 
-  height: 0px;
+  /*height: 0px; Již není třeba*/
   /*transition-duration: 2s; /* S nynějším řešením toto vůbec nic nedělá*/
 
 }
