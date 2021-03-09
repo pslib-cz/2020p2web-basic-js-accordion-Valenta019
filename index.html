@@ -242,13 +242,14 @@
             
             
 
-            if (details.style.height != "0px"){
+            if (details.offsetHeight != "0px")
+            {
                 details.style.height = 0 + "px" 
                 details.style.display = "none"
             }
             else
             {
-                console.log(details.offsetHeight)
+                //console.log(details.offsetHeight)
                 details.style.height = "auto"
                 details.style.display = "block"
             }
