@@ -746,6 +746,8 @@ details>summary::-webkit-details-marker {
 
 .detail-vypujcky-container {
   display: none;
+  
+  height: 0px;
 }
 .detail-vypujcky-container.detail-vypujcky-container-checked {
   display: block;
