@@ -744,7 +744,7 @@ details>summary::-webkit-details-marker {
   padding-top: 5px;
 }
 
-.detail-vypujcky-container {
+.detail-vypujcky-container { 
   display: none;
 
   height: 0px;
