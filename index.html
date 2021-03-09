@@ -238,14 +238,21 @@
 
             let details = vypujcka.getElementsByClassName("detail-vypujcky-container")[0] // Na kliknutí sežeň z vlastní výpujčky detaily
             
+
             if (details.scrollHeight != "0"){ // A zavři je ||
+
+
                 details.style.height = 0 + "px" 
                 details.classList.remove("detail-vypujcky-container-checked")
             }
             else
             {
+
                 details.style.height = "auto" // A otevři je | transition: ; vůbec nic nedělá, ani s danou hodnotou.
                 details.classList.add("detail-vypujcky-container-checked")
+
+
+
             }
 
         }

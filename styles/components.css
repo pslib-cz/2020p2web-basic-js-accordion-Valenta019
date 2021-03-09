@@ -749,6 +749,7 @@ details>summary::-webkit-details-marker {
 
   height: 0px;
   /*transition-duration: 2s; /* S nynějším řešením toto vůbec nic nedělá*/
+
 }
 .detail-vypujcky-container.detail-vypujcky-container-checked {
   display: block;
